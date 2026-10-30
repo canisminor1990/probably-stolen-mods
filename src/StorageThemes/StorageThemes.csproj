@@ -6,10 +6,11 @@
     <ModInstallName>StorageThemes</ModInstallName>
   </PropertyGroup>
 
-  <!-- Ships with the DLL. Source art in psd\ and Reference\ stays in the repo only. -->
+  <!-- Ships with the DLL. preview.png stays beside this file and is installed to the mod root.
+       Source art in psd\ and Reference\ stays in the repo only. -->
   <ItemGroup>
-    <ModFile Include="manifest.xml;preview.png;Textures\**;Sounds\**;Localization\**;LootTables\**;Books\**" Exclude="Textures\**\*.psd" />
-    <None Remove="Textures\**;Sounds\**;Localization\**;LootTables\**;Books\**;psd\**;Reference\**" />
+    <ModFile Include="manifest.xml;Textures\**;Sounds\**;Localization\**;LootTables\**;Books\**" Exclude="Textures\**\*.psd" />
+    <None Remove="preview.png;Textures\**;Sounds\**;Localization\**;LootTables\**;Books\**;psd\**;Reference\**" />
   </ItemGroup>
 
 </Project>

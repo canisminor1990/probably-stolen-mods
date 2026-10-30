@@ -4,7 +4,7 @@
   <Name>Storage Themes</Name>
   <Author>CanisMinor</Author>
   <ModVersion>1.0.0</ModVersion>
-  <Description>Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel. Shift-toggle restores the original sprite.</Description>
+  <Description>Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel.</Description>
   <GameVersions>
     <Version>0.46</Version>
   </GameVersions>

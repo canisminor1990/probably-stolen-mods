@@ -23,7 +23,7 @@ public class ModEntry : IMod
             () => ModHelper.GetLocalized(manifest.ID, "themes_tip"),
             true);
 
-        Log.Log("Storage Themes ready. Toggle appearance opens the theme panel. Shift-toggle restores the original sprite.");
+        Log.Log("Storage Themes ready. Toggle appearance opens the theme panel.");
     }
 
     public void OnEnable()

@@ -142,44 +142,6 @@ internal static class Patch_SetSpriteQuick
     }
 }
 
-[HarmonyPatch(typeof(GameItem), nameof(GameItem.ToggleSlotItem))]
-internal static class Patch_ToggleSlotItem
-{
-    private static bool Prefix(GameItem __instance)
-    {
-        if (!Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.RightShift))
-        {
-            return true;
-        }
-
-        string baseName = Persist.ReadBase(__instance);
-        if (baseName == null && Util.TryParse(__instance.spritePath, out string parsedBase, out _))
-        {
-            baseName = parsedBase;
-        }
-
-        if (string.IsNullOrEmpty(baseName))
-        {
-            return true;
-        }
-
-        Persist.Clear(__instance);
-        __instance.SetSprite(__instance.spriteAtlasPath, baseName);
-        if (__instance is GameItemElement element)
-        {
-            Sprite sprite = element.ResolveSpriteByName(baseName);
-            if (sprite != null)
-            {
-                element.ApplyAnimationFrame(sprite);
-            }
-
-            element.Validate();
-        }
-
-        return false;
-    }
-}
-
 [HarmonyPatch(typeof(GameItemElement), nameof(GameItemElement.Validate))]
 internal static class Patch_Validate
 {

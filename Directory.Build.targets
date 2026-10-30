@@ -9,6 +9,9 @@
     <MakeDir Directories="$(ModInstallDir)" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModInstallDir)" />
     <Copy SourceFiles="@(ModFile)" DestinationFiles="@(ModFile->'$(ModInstallDir)\%(RelativeDir)%(Filename)%(Extension)')" Condition="Exists('%(ModFile.FullPath)')" />
+    <!-- preview.png must ship beside manifest.xml. The loader treats a copy inside Textures as a sprite. -->
+    <Copy SourceFiles="$(MSBuildProjectDirectory)\preview.png" DestinationFiles="$(ModInstallDir)\preview.png" Condition="Exists('$(MSBuildProjectDirectory)\preview.png')" />
+    <Warning Text="$(MSBuildProjectName) has no preview.png next to the project file, so the mod menu has no banner." Condition="!Exists('$(MSBuildProjectDirectory)\preview.png')" />
     <Message Importance="high" Text="Installed $(ModInstallName) into $(ModInstallDir)" />
   </Target>
 

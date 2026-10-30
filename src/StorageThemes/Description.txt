@@ -1,0 +1,73 @@
+[h1]Storage Themes[/h1]
+
+Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel.
+
+This is only a cosmetic mod. Storage capacity and contents are unchanged.
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/psd/screentshot.png[/img]
+
+[h3]Languages[/h3]
+
+UI text covers English and Chinese.
+
+[h3]Features[/h3]
+
+[list]
+[*]Works on the storage bay and the large storage bay.
+[*]Toggle appearance to open the theme panel, then pick a skin.
+[*]Keeps the vanilla frames: Original, Orange, and Dark.
+[*]Painted themes: Blank, Chemistry, Chip, Fish, Food, Grape, Household, Material, Medical, Plant, Luxury, Water, and Weapon.
+[/list]
+
+[h3]Settings[/h3]
+
+[list]
+[*]Open the Mods list, then click Settings on this mod.
+[*]Theme art can be turned off. The game asks for a restart.
+[/list]
+
+[h3]Feedback & Source[/h3]
+
+[list]
+[*]Repository: [url=https://github.com/canisminor1990/probably-stolen-mods]canisminor1990/probably-stolen-mods[/url]
+[*]Bugs and requests go on [url=https://github.com/canisminor1990/probably-stolen-mods/issues]GitHub Issues[/url].
+[*]If you like the work and want to support it: [url=https://ko-fi.com/canisminor1990]ko-fi.com/canisminor1990[/url]
+[/list]
+
+[hr][/hr]
+
+[h1]储物舱涂装 / Storage Themes[/h1]
+
+[i]给储物舱加上绘制的主题贴图。切换外观时打开涂装面板。[/i]
+
+仅装饰，不改变容量和里面的东西。
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/psd/screentshot.png[/img]
+
+[h3]语言[/h3]
+
+界面文本覆盖英语和中文。
+
+[h3]功能[/h3]
+
+[list]
+[*]支持储物舱和大号储物舱。
+[*]切换外观打开涂装面板，再点选一种涂装。
+[*]保留游戏自带的三档：原图、橙色、深色。
+[*]绘制的主题：空白、化学、芯片、鱼、食物、葡萄、日用、材料、医疗、植物、奢侈品、水、武器。
+[/list]
+
+[h3]设置[/h3]
+
+[list]
+[*]打开模组列表，点击本模组的「设置」。
+[*]可以关闭主题涂装。游戏会要求重启。
+[/list]
+
+[h3]问题反馈与源码[/h3]
+
+[list]
+[*]模组仓库：[url=https://github.com/canisminor1990/probably-stolen-mods]canisminor1990/probably-stolen-mods[/url]
+[*]问题请开 [url=https://github.com/canisminor1990/probably-stolen-mods/issues]GitHub Issues[/url]。
+[*]喜欢这些模组、想支持一下：[url=https://ko-fi.com/canisminor1990]ko-fi.com/canisminor1990[/url]
+[/list]

@@ -18,6 +18,7 @@ internal static class Palette
         "grape",
         "household",
         "material",
+        "meat",
         "medical",
         "plant",
         "substance",

@@ -29,22 +29,36 @@ internal static class Patch_MakeSpriteCyclable
         Persist.WriteBase(item, baseName);
         LogOnce(item, baseName);
 
-        bool themes = ModEntry.Themes == null || ModEntry.Themes.Value;
-        if (!themes || Palette.Themes.Length == 0)
+        if (!ModEntry.IsKindEnabled(baseName) || Palette.Themes.Length == 0)
         {
             return;
         }
 
-        string[] expanded = new string[spriteVariants.Length + Palette.Themes.Length];
+        List<string> painted = new List<string>();
+        for (int i = 0; i < Palette.Themes.Length; i++)
+        {
+            string theme = Palette.Themes[i];
+            if (ThemeArt.Has(baseName, theme))
+            {
+                painted.Add(Palette.Name(baseName, "t" + theme));
+            }
+        }
+
+        if (painted.Count == 0)
+        {
+            return;
+        }
+
+        string[] expanded = new string[spriteVariants.Length + painted.Count];
         int index = 0;
         for (int i = 0; i < spriteVariants.Length; i++)
         {
             expanded[index++] = spriteVariants[i];
         }
 
-        for (int i = 0; i < Palette.Themes.Length; i++)
+        for (int i = 0; i < painted.Count; i++)
         {
-            expanded[index++] = Palette.Name(baseName, "t" + Palette.Themes[i]);
+            expanded[index++] = painted[i];
         }
 
         spriteVariants = expanded;
@@ -71,7 +85,7 @@ internal static class Patch_MakeSpriteCyclable
             return;
         }
 
-        if (ModEntry.Themes != null && !ModEntry.Themes.Value)
+        if (!ModEntry.IsKindEnabled(spriteVariants[0]))
         {
             return;
         }
@@ -94,6 +108,89 @@ internal static class Patch_MakeSpriteCyclable
 
         string[] options = (string[])spriteVariants.Clone();
         item.onToggleSlotItemFunc = (toggled, _, _) => ThemePicker.Open(toggled, atlasPath, options);
+    }
+}
+
+[HarmonyPatch(typeof(ShipSystemDirectory), "SmugglerBay")]
+internal static class Patch_SmugglerBay
+{
+    private static void Postfix(GameItem __result)
+    {
+        Enable(__result, "smuggler_bay");
+    }
+
+    internal static void Enable(GameItem item, string sprite)
+    {
+        Enable(item, "Items/items_ship", sprite);
+    }
+
+    internal static void Enable(GameItem item, string atlas, string sprite)
+    {
+        if (item == null || string.IsNullOrEmpty(atlas) || string.IsNullOrEmpty(sprite) || !ModEntry.IsKindEnabled(sprite))
+        {
+            return;
+        }
+
+        ToggleAppearanceHelper.MakeSpriteCyclable(item, atlas, sprite);
+    }
+}
+
+[HarmonyPatch(typeof(ShipSystemDirectory), "HyperTechBay")]
+internal static class Patch_HyperTechBay
+{
+    private static void Postfix(GameItem __result)
+    {
+        Patch_SmugglerBay.Enable(__result, "Items/items_tool2", "hypertech_bay");
+    }
+}
+
+[HarmonyPatch(typeof(ShipSystemDirectory), "MachineBay")]
+internal static class Patch_MachineBay
+{
+    private static void Postfix(GameItem __result)
+    {
+        Patch_SmugglerBay.Enable(__result, "Items/items_tool2", "machine_bay0");
+    }
+}
+
+[HarmonyPatch(typeof(ShipSystemDirectory), "MachineBayExt")]
+internal static class Patch_MachineBayExt
+{
+    private static void Postfix(GameItem __result)
+    {
+        Patch_SmugglerBay.Enable(__result, "Items/items_tool2", "machine_bay_ext");
+    }
+}
+
+[HarmonyPatch(typeof(GameItem), nameof(GameItem.SetSpriteAndShape))]
+internal static class Patch_SetSpriteAndShape
+{
+    private static void Postfix(GameItem __instance, string spriteAtlasPath, string spritePath)
+    {
+        if (!Util.IsMachineBayFrame(spritePath) || !ModEntry.IsKindEnabled(spritePath) || !Persist.TryRead(__instance, out string suffix))
+        {
+            return;
+        }
+
+        string variant = Palette.Name(spritePath, suffix);
+        __instance.SetSprite(spriteAtlasPath, variant);
+        if (__instance is GameItemElement element)
+        {
+            Sprite sprite = element.ResolveSpriteByName(variant);
+            if (sprite != null)
+            {
+                element.ApplyAnimationFrame(sprite);
+            }
+        }
+    }
+}
+
+[HarmonyPatch(typeof(ShipSystemDirectory), "SmugglerBayMod")]
+internal static class Patch_SmugglerBayMod
+{
+    private static void Postfix(GameItem __result)
+    {
+        Patch_SmugglerBay.Enable(__result, "smuggler_bay_large");
     }
 }
 
@@ -126,7 +223,7 @@ internal static class Patch_SetSprite
         {
             Persist.Write(item, suffix);
         }
-        else
+        else if (ModEntry.IsKindEnabled(spritePath) || !Persist.TryRead(item, out _))
         {
             Persist.Clear(item);
         }
@@ -156,18 +253,39 @@ internal static class Patch_Validate
         }
 
         string spritePath = __instance.spritePath;
-        if (Util.TryParse(spritePath, out _, out _))
+        if (Util.TryParse(spritePath, out string themedBase, out _))
+        {
+            if (ModEntry.IsKindEnabled(themedBase))
+            {
+                return;
+            }
+
+            ShowPlain(__instance, themedBase);
+            return;
+        }
+
+        if (!Persist.TryRead(__instance, out string suffix))
         {
             return;
         }
 
         string baseName = Persist.ReadBase(__instance);
-        if (baseName == null || spritePath != baseName || !Persist.TryRead(__instance, out string suffix))
+        string frame = spritePath;
+        if (baseName != null && spritePath == baseName)
+        {
+            frame = baseName;
+        }
+        else if (!Util.IsMachineBayFrame(spritePath))
         {
             return;
         }
 
-        string variant = Palette.Name(baseName, suffix);
+        if (!ModEntry.IsKindEnabled(frame))
+        {
+            return;
+        }
+
+        string variant = Palette.Name(frame, suffix);
         busy = true;
         try
         {
@@ -176,6 +294,24 @@ internal static class Patch_Validate
             if (sprite != null)
             {
                 __instance.ApplyAnimationFrame(sprite);
+            }
+        }
+        finally
+        {
+            busy = false;
+        }
+    }
+
+    private static void ShowPlain(GameItemElement item, string spriteName)
+    {
+        busy = true;
+        try
+        {
+            item.SetSprite(item.spriteAtlasPath, spriteName);
+            Sprite sprite = item.ResolveSpriteByName(spriteName);
+            if (sprite != null)
+            {
+                item.ApplyAnimationFrame(sprite);
             }
         }
         finally

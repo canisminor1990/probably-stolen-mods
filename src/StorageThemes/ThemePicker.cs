@@ -64,7 +64,7 @@ internal static class ThemePicker
             int column = i % Columns;
             int row = i / Columns;
             string label = Label(option, options[0]);
-            bool selected = option == current;
+            bool selected = IsSelected(option, current);
 
             SpritePixelElement icon = new SpritePixelElement(atlasPath, PreviewName(option));
             if (element != null)
@@ -106,7 +106,7 @@ internal static class ThemePicker
         {
             if (item != null && !string.IsNullOrEmpty(option))
             {
-                item.SetSprite(atlasPath, option);
+                item.SetSprite(atlasPath, ApplyFrame(item, option));
                 if (item is GameItemElement element)
                 {
                     Sprite sprite = element.ResolveSpriteByName(option);
@@ -127,6 +127,59 @@ internal static class ThemePicker
         {
             Close();
         }
+    }
+
+    private static bool IsSelected(string option, string current)
+    {
+        if (option == current)
+        {
+            return true;
+        }
+
+        bool optionThemed = Util.TryParse(option, out string optionBase, out string optionSuffix);
+        bool currentThemed = Util.TryParse(current, out string currentBase, out string currentSuffix);
+        if (optionThemed && currentThemed)
+        {
+            return optionSuffix == currentSuffix
+                && Util.IsMachineBayFrame(optionBase)
+                && Util.IsMachineBayFrame(currentBase);
+        }
+
+        return !optionThemed
+            && !currentThemed
+            && Util.IsMachineBayFrame(option)
+            && Util.IsMachineBayFrame(current);
+    }
+
+    private static string ApplyFrame(GameItem item, string option)
+    {
+        string current = item != null ? item.spritePath : null;
+        string frame = null;
+        if (Util.TryParse(current, out string shown, out _) && Util.IsMachineBayFrame(shown))
+        {
+            frame = shown;
+        }
+        else if (Util.IsMachineBayFrame(current))
+        {
+            frame = current;
+        }
+
+        if (frame == null)
+        {
+            return option;
+        }
+
+        if (Util.TryParse(option, out string optionBase, out string suffix) && Util.IsMachineBayFrame(optionBase))
+        {
+            return Palette.Name(frame, suffix);
+        }
+
+        if (Util.IsMachineBayFrame(option))
+        {
+            return frame;
+        }
+
+        return option;
     }
 
     private static string PreviewName(string option)

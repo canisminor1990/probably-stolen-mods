@@ -1,6 +1,12 @@
 # en.csv
-themes_label,Theme art
-themes_tip,The appearance toggle on a storage bay opens a panel of painted skins.
+kind_storage,Storage bays
+kind_storage_tip,Includes the large storage bay.
+kind_smuggler,Smuggler bays
+kind_smuggler_tip,Includes the large smuggler bay.
+kind_hypertech,Hypertech bay
+kind_hypertech_tip,Off leaves it on the original sprite.
+kind_machine,Machine bays
+kind_machine_tip,Includes the extended machine bay.
 picker_title,Themes
 theme_original,Original
 theme_frame_warm,Orange
@@ -13,6 +19,7 @@ theme_food,Food
 theme_grape,Grape
 theme_household,Household
 theme_material,Material
+theme_meat,Meat
 theme_medical,Medical
 theme_plant,Plant
 theme_substance,Luxury

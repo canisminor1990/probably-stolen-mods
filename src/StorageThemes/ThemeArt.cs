@@ -10,6 +10,42 @@ internal static class ThemeArt
     private static readonly HashSet<string> SizeLogged = new HashSet<string>();
     private static readonly HashSet<string> MissingLogged = new HashSet<string>();
 
+    internal static bool Has(string baseName, string themeKey)
+    {
+        if (string.IsNullOrEmpty(baseName) || string.IsNullOrEmpty(themeKey))
+        {
+            return false;
+        }
+
+        if (FileExists(themeKey, SanitizeShape(baseName)))
+        {
+            return true;
+        }
+
+        return Util.IsMachineBayFrame(baseName) && FileExists(themeKey, "machine_bay");
+    }
+
+    private static bool FileExists(string themeKey, string shape)
+    {
+        return ModHelper.ModFileExists(ModEntry.ModId, "Textures/" + themeKey + "/" + shape + ".png");
+    }
+
+    private static string ArtShape(string baseName, string themeKey)
+    {
+        string shape = SanitizeShape(baseName);
+        if (FileExists(themeKey, shape))
+        {
+            return shape;
+        }
+
+        if (Util.IsMachineBayFrame(baseName) && FileExists(themeKey, "machine_bay"))
+        {
+            return "machine_bay";
+        }
+
+        return shape;
+    }
+
     internal static Sprite Get(GameItemElement element, string baseName, string themeKey)
     {
         if (element == null || string.IsNullOrEmpty(baseName) || string.IsNullOrEmpty(themeKey))
@@ -17,7 +53,7 @@ internal static class ThemeArt
             return null;
         }
 
-        string shape = SanitizeShape(baseName);
+        string shape = ArtShape(baseName, themeKey);
         string cacheKey = shape + "/" + themeKey;
         if (Cache.TryGetValue(cacheKey, out Sprite cached) && cached != null)
         {

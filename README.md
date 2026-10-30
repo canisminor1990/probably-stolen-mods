@@ -6,7 +6,7 @@
 
 | Cover | Folder | Title | Description | Steam |
 |-------|--------|-------|-------------|-------|
-| ![preview](src/StorageThemes/preview.png) | [StorageThemes](src/StorageThemes) | 储物舱涂装 / Storage Themes | 给储物舱加上绘制的主题贴图。切换外观时打开涂装面板。 Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3830120722) |
+| ![preview](src/StorageThemes/preview.png) | [StorageThemes](src/StorageThemes) | 储物舱涂装 / Storage Themes | 给储物舱、走私舱、超科技舱和机械舱加上绘制的主题贴图。切换外观时打开涂装面板。 Adds painted theme sprites to storage bays, smuggler bays, the hypertech bay, and machine bays. The appearance toggle opens a theme panel. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3830120722) |
 
 ## Commands
 

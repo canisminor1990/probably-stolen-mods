@@ -1,6 +1,6 @@
 [h1]Storage Themes[/h1]
 
-Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel.
+Adds painted theme sprites to storage bays, smuggler bays, the hypertech bay, and machine bays. The appearance toggle opens a theme panel.
 
 This is only a cosmetic mod. Storage capacity and contents are unchanged.
 
@@ -13,17 +13,18 @@ UI text covers English and Chinese.
 [h3]Features[/h3]
 
 [list]
-[*]Works on the storage bay and the large storage bay.
+[*]Works on the storage bay, the large storage bay, the smuggler bay, the large smuggler bay, the hypertech bay, the machine bay, and the extended machine bay.
 [*]Toggle appearance to open the theme panel, then pick a skin.
-[*]Keeps the vanilla frames: Original, Orange, and Dark.
-[*]Painted themes: Blank, Chemistry, Chip, Fish, Food, Grape, Household, Material, Medical, Plant, Luxury, Water, and Weapon.
+[*]Storage bays keep the vanilla frames: Original, Orange, and Dark.
+[*]The machine bay keeps its five fill sprites, machine_bay0 through machine_bay4. One machine_bay.png covers all five, and the skin stays on as the bay fills. A machine_bay0.png through machine_bay4.png file is used for that fill level when it exists.
+[*]A painted theme appears when its sprite is in that theme folder. Storage bays and the hypertech bay have the full set. Machine bays have Blank, Chemistry, Fish, Food, Grape, Household, Material, Meat, Plant, Water, and Weapon. Smuggler bays currently have Chip, Medical, and Weapon.
 [/list]
 
 [h3]Settings[/h3]
 
 [list]
 [*]Open the Mods list, then click Settings on this mod.
-[*]Theme art can be turned off. The game asks for a restart.
+[*]Each container kind has its own switch: storage bays, smuggler bays, the hypertech bay, and machine bays. The game asks for a restart. A kind that is off shows its original art.
 [/list]
 
 [h3]Feedback & Source[/h3]
@@ -38,7 +39,7 @@ UI text covers English and Chinese.
 
 [h1]储物舱涂装 / Storage Themes[/h1]
 
-[i]给储物舱加上绘制的主题贴图。切换外观时打开涂装面板。[/i]
+[i]给储物舱、走私舱、超科技舱和机械舱加上绘制的主题贴图。切换外观时打开涂装面板。[/i]
 
 仅装饰，不改变容量和里面的东西。
 
@@ -51,17 +52,18 @@ UI text covers English and Chinese.
 [h3]功能[/h3]
 
 [list]
-[*]支持储物舱和大号储物舱。
+[*]支持储物舱、大号储物舱、走私舱、大号走私舱、超科技舱、机械舱和扩展机械舱。
 [*]切换外观打开涂装面板，再点选一种涂装。
-[*]保留游戏自带的三档：原图、橙色、深色。
-[*]绘制的主题：空白、化学、芯片、鱼、食物、葡萄、日用、材料、医疗、植物、奢侈品、水、武器。
+[*]储物舱保留游戏自带的三档：原图、橙色、深色。
+[*]机械舱仍按装填程度使用 machine_bay0 到 machine_bay4。一张 machine_bay.png 覆盖这五档，装东西时涂装不会掉。如果另外放了 machine_bay0.png 到 machine_bay4.png，那一档就用对应的图。
+[*]某个主题文件夹里有对应图片，面板里才会出现它。储物舱和超科技舱是全套。机械舱目前有空白、化学、鱼、食物、葡萄、日用、材料、肉类、植物、水、武器。走私舱目前有芯片、医疗、武器。
 [/list]
 
 [h3]设置[/h3]
 
 [list]
 [*]打开模组列表，点击本模组的「设置」。
-[*]可以关闭主题涂装。游戏会要求重启。
+[*]可以按容器种类分别开关：储物舱、走私舱、超科技舱、机械舱。游戏会要求重启。关掉的那一类显示原图。
 [/list]
 
 [h3]问题反馈与源码[/h3]

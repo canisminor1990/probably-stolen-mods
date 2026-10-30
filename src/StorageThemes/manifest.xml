@@ -3,8 +3,8 @@
   <ID>storage_themes</ID>
   <Name>储物舱涂装 / Storage Themes</Name>
   <Author>CanisMinor</Author>
-  <ModVersion>1.0.0</ModVersion>
-  <Description>给储物舱加上绘制的主题贴图。切换外观时打开涂装面板。 Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel.</Description>
+  <ModVersion>1.1.0</ModVersion>
+  <Description>给储物舱、走私舱、超科技舱和机械舱加上绘制的主题贴图。切换外观时打开涂装面板。 Adds painted theme sprites to storage bays, smuggler bays, the hypertech bay, and machine bays. The appearance toggle opens a theme panel.</Description>
   <GameVersions>
     <Version>0.46</Version>
   </GameVersions>

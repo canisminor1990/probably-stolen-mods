@@ -1,0 +1,20 @@
+# zh.csv
+themes_label,主题涂装
+themes_tip,在储物舱上切换外观时，打开涂装面板。
+picker_title,涂装
+theme_original,原图
+theme_frame_warm,橙色
+theme_frame_dark,深色
+theme_blank,空白
+theme_chemistry,化学
+theme_chip,芯片
+theme_fish,鱼
+theme_food,食物
+theme_grape,葡萄
+theme_household,日用
+theme_material,材料
+theme_medical,医疗
+theme_plant,植物
+theme_substance,奢侈品
+theme_water,水
+theme_weapon,武器

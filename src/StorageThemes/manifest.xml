@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <ID>storage_themes</ID>
+  <Name>Storage Themes</Name>
+  <Author>CanisMinor</Author>
+  <ModVersion>1.0.0</ModVersion>
+  <Description>Adds painted theme sprites to storage bays. The appearance toggle opens a theme panel. Shift-toggle restores the original sprite.</Description>
+  <GameVersions>
+    <Version>0.46</Version>
+  </GameVersions>
+  <Prerequisites />
+  <!-- Every DLL the game must load, relative to this folder. Nothing else in the folder is loaded. -->
+  <Assemblies>
+    <Assembly>StorageThemes.dll</Assembly>
+  </Assemblies>
+  <!-- Theme art is read with ModHelper.ReadModFileBytes. -->
+  <Capabilities />
+</Manifest>

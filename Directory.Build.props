@@ -1,0 +1,48 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <!-- Repo lives in &lt;game&gt;\Modding. Override with /p:GameDir= or a GameDir environment variable. -->
+    <GameDir Condition="'$(GameDir)' == ''">$(MSBuildThisFileDirectory)..</GameDir>
+    <ManagedDir>$(GameDir)\Probably Stolen_Data\Managed</ManagedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(ManagedDir)\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(ManagedDir)\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(ManagedDir)\Unity.TextMeshPro.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(ManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(ManagedDir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

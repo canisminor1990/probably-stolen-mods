@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>StorageThemes</AssemblyName>
+    <RootNamespace>StorageThemes</RootNamespace>
+    <ModInstallName>StorageThemes</ModInstallName>
+  </PropertyGroup>
+
+  <!-- Ships with the DLL. Source art in psd\ and Reference\ stays in the repo only. -->
+  <ItemGroup>
+    <ModFile Include="manifest.xml;preview.png;Textures\**;Sounds\**;Localization\**;LootTables\**;Books\**" Exclude="Textures\**\*.psd" />
+    <None Remove="Textures\**;Sounds\**;Localization\**;LootTables\**;Books\**;psd\**;Reference\**" />
+  </ItemGroup>
+
+</Project>

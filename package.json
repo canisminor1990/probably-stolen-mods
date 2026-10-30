@@ -1,0 +1,10 @@
+{
+  "name": "probably-stolen-mods",
+  "private": true,
+  "description": "Probably Stolen mods. Each mod is a project under src and installs into the game Mods folder when built.",
+  "scripts": {
+    "build": "dotnet build probably-stolen-mods.slnx -c Release",
+    "build:storage-themes": "dotnet build src/StorageThemes/StorageThemes.csproj -c Release",
+    "clean": "dotnet clean probably-stolen-mods.slnx"
+  }
+}

@@ -1,0 +1,20 @@
+# en.csv
+themes_label,Theme art
+themes_tip,The appearance toggle on a storage bay opens a panel of painted skins.
+picker_title,Themes
+theme_original,Original
+theme_frame_warm,Orange
+theme_frame_dark,Dark
+theme_blank,Blank
+theme_chemistry,Chemistry
+theme_chip,Chip
+theme_fish,Fish
+theme_food,Food
+theme_grape,Grape
+theme_household,Household
+theme_material,Material
+theme_medical,Medical
+theme_plant,Plant
+theme_substance,Luxury
+theme_water,Water
+theme_weapon,Weapon

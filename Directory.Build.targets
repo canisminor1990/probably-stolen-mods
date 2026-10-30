@@ -1,0 +1,15 @@
+<Project>
+
+  <!-- Evaluated after the mod project sets ModInstallName. -->
+  <PropertyGroup>
+    <ModInstallDir Condition="'$(ModInstallName)' != ''">$(GameDir)\Mods\$(ModInstallName)</ModInstallDir>
+  </PropertyGroup>
+
+  <Target Name="InstallMod" AfterTargets="Build" Condition="'$(ModInstallName)' != ''">
+    <MakeDir Directories="$(ModInstallDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModInstallDir)" />
+    <Copy SourceFiles="@(ModFile)" DestinationFiles="@(ModFile->'$(ModInstallDir)\%(RelativeDir)%(Filename)%(Extension)')" Condition="Exists('%(ModFile.FullPath)')" />
+    <Message Importance="high" Text="Installed $(ModInstallName) into $(ModInstallDir)" />
+  </Target>
+
+</Project>

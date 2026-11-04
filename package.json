@@ -5,6 +5,7 @@
   "scripts": {
     "build": "dotnet build probably-stolen-mods.slnx -c Release",
     "build:storage-themes": "dotnet build src/StorageThemes/StorageThemes.csproj -c Release",
+    "build:smuggler-bay-tabs": "dotnet build src/SmugglerBayTabs/SmugglerBayTabs.csproj -c Release",
     "clean": "dotnet clean probably-stolen-mods.slnx"
   }
 }

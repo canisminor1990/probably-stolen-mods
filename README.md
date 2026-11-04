@@ -7,12 +7,14 @@
 | Cover | Folder | Title | Description | Steam |
 |-------|--------|-------|-------------|-------|
 | ![preview](src/StorageThemes/preview.png) | [StorageThemes](src/StorageThemes) | 储物舱涂装 / Storage Themes | 给储物舱、走私舱、超科技舱和机械舱加上绘制的主题贴图。切换外观时打开涂装面板。 Adds painted theme sprites to storage bays, smuggler bays, the hypertech bay, and machine bays. The appearance toggle opens a theme panel. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3830120722) |
+| ![preview](src/SmugglerBayTabs/preview.png) | [SmugglerBayTabs](src/SmugglerBayTabs) | 暗格储物标签 / Smuggler Bay Tabs | 走私者暗格和走私者暗格(改进)可以使用储藏区扩建套件增加储物标签页。暗格每次增加 2 页，改进暗格每次增加 1 页，最多 5 页。 The smuggler bay and the improved smuggler bay accept the storage expansion kit. The bay gains 2 tabs per kit, the improved bay gains 1, and both stop at 5 tabs. | |
 
 ## Commands
 
 ```text
 npm run build
 npm run build:storage-themes
+npm run build:smuggler-bay-tabs
 npm run clean
 ```
 
@@ -20,6 +22,7 @@ npm run clean
 |--------|------|
 | `build` | Compile every mod and install it into the game `Mods` folder |
 | `build:storage-themes` | Compile and install Storage Themes only |
+| `build:smuggler-bay-tabs` | Compile and install Smuggler Bay Tabs only |
 | `clean` | Remove build output |
 
 The repo is expected to sit inside the game folder. A checkout anywhere else needs `/p:GameDir=` or a `GameDir` environment variable pointing at the folder that contains `Probably Stolen.exe`.

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>SmugglerBayTabs</AssemblyName>
+    <RootNamespace>SmugglerBayTabs</RootNamespace>
+    <ModInstallName>SmugglerBayTabs</ModInstallName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ModFile Include="manifest.xml" />
+    <None Remove="preview.png" />
+  </ItemGroup>
+
+</Project>

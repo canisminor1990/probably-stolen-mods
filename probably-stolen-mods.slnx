@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/StorageThemes/StorageThemes.csproj" />
+    <Project Path="src/SmugglerBayTabs/SmugglerBayTabs.csproj" />
   </Folder>
 </Solution>

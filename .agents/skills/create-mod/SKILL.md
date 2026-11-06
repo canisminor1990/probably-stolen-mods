@@ -92,9 +92,11 @@ public class ModEntry : IMod
 
 设置用 `ModHelper.GetConfig(manifest.ID)`，在 `Init` 里 `Define`。分区标题会原样显示，需要双语时写成 `中文 / English`。标签用 `() => ModHelper.GetLocalized(...)`。只在启动时读取的项加 `requiresRestart: true`。
 
-本地化是 `Localization/zh.csv` 和 `Localization/en.csv`。贴图像素图放 `Textures/<主题>/`，文件名就是游戏里的精灵名，例如 `smuggler_bay_large.png` 只进暗格。源文件 `psd/` 和对照图 `Reference/` 不安装。
+本地化是 `Localization/zh.csv` 和 `Localization/en.csv`。贴图像素图放 `Textures/<主题>/`。文件名就是游戏精灵名，模组只认文件名：`smuggler_bay_large.png` 进暗格，`storage_bay_large.png` 进大号储物舱。不要按轮廓或肉眼改名。源文件 `psd/` 和对照图 `Reference/` 不安装。
 
-玩家看到的说明只写在 `README.md`。`npm run desc` 把它转成 `Description.txt`（BBCode，英文和中文用 `[hr][/hr]` 分开）。这个文件不放进 `ModFile`。格式照 `src/StorageThemes/README.md`。
+截图放在 `screenshots/`，写进该模组的 `README.md`，中英文各放一遍。用 GitHub raw 地址，单独成行。`screenshots/` 不打进安装包。
+
+玩家看到的说明只写在 `README.md`，写给玩家：怎么用、有哪些涂装、设置在哪。不要写贴图文件名，也不要写「文件夹里有图才会出现」。`npm run desc` 把它转成 `Description.txt`（BBCode，英文和中文用 `[hr][/hr]` 分开）。这个文件不放进 `ModFile`。格式照 `src/StorageThemes/README.md`。
 
 ## 构建与本机验证
 

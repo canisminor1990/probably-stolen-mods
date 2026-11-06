@@ -17,7 +17,7 @@ for (var i = 0; i < args.Length; i++)
 		names.Add(args[i]);
 }
 
-root = Path.GetFullPath(root ?? Directory.GetCurrentDirectory());
+root = Path.GetFullPath(root ?? System.IO.Directory.GetCurrentDirectory());
 var pkgPath = Path.Combine(root, "package.json");
 if (!File.Exists(pkgPath))
 {
@@ -31,7 +31,7 @@ var mods = pkg.RootElement.GetProperty("mods");
 var srcDir = Path.Combine(root, "src");
 if (names.Count == 0)
 {
-	foreach (var folder in Directory.GetDirectories(srcDir))
+	foreach (var folder in System.IO.Directory.GetDirectories(srcDir))
 	{
 		var name = Path.GetFileName(folder);
 		if (mods.TryGetProperty(name, out var meta) && meta.TryGetProperty("steamId", out _))

@@ -1,0 +1,3 @@
+<Project>
+  <!-- Stop the repo props from pulling this tool into the game's netstandard2.1 references. -->
+</Project>

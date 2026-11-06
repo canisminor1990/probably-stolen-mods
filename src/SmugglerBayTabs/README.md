@@ -1,6 +1,12 @@
 # Smuggler Bay Tabs
 
-The smuggler bay and the improved smuggler bay accept the storage expansion kit. The bay gains 2 tabs per kit, the improved bay gains 1, and both stop at 5 tabs, matching the storage bay and the expanded storage bay.
+The smuggler bay and the improved smuggler bay can use a storage expansion kit to add tabs.
+
+Steam Workshop: [暗格储物标签 / Smuggler Bay Tabs](https://steamcommunity.com/sharedfiles/filedetails/?id=3834632565) · [Description.txt](Description.txt) (BBCode)
+
+- The smuggler bay gains 2 tabs per kit.
+- The improved smuggler bay gains 1 tab per kit.
+- Both stop at 5 tabs, the same as a storage bay.
 
 ### Feedback & Source
 
@@ -12,7 +18,11 @@ The smuggler bay and the improved smuggler bay accept the storage expansion kit.
 
 # 暗格储物标签 / Smuggler Bay Tabs
 
-*走私者暗格和走私者暗格(改进)可以使用储藏区扩建套件增加储物标签页。暗格每次增加 2 页，改进暗格每次增加 1 页，最多 5 页，与储藏区和储藏区(扩建)相同。*
+*走私者暗格和走私者暗格(改进)可以用储藏区扩建套件增加标签页。*
+
+- 暗格每使用一套，增加 2 页。
+- 改进暗格每使用一套，增加 1 页。
+- 两种暗格最多 5 页，和储藏区一样。
 
 ### 问题反馈与源码
 

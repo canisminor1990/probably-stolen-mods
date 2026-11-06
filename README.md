@@ -7,8 +7,8 @@
 <!-- mods-table -->
 | Cover | Folder | Title | Description | Steam |
 |-------|--------|-------|-------------|-------|
-| <img src="https://github.com/canisminor1990/probably-stolen-mods/blob/main/src/SmugglerBayTabs/preview.png?raw=true" width="96" alt="Smuggler Bay Tabs"> | [SmugglerBayTabs](src/SmugglerBayTabs) | Smuggler Bay Tabs / 暗格储物标签 | The smuggler bay and the improved smuggler bay accept the storage expansion kit. The bay gains 2 tabs per kit, the improved bay gains 1, and both stop at 5 tabs, matching the storage bay and the expanded storage bay. |  |
-| <img src="https://github.com/canisminor1990/probably-stolen-mods/blob/main/src/StorageThemes/preview.png?raw=true" width="96" alt="Storage Themes"> | [StorageThemes](src/StorageThemes) | Storage Themes / 储物舱涂装 | Adds painted theme sprites to storage bays, smuggler bays, the hypertech bay, and machine bays. The appearance toggle opens a theme panel. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3830120722) |
+| <img src="https://github.com/canisminor1990/probably-stolen-mods/blob/main/src/SmugglerBayTabs/preview.png?raw=true" width="96" alt="Smuggler Bay Tabs"> | [SmugglerBayTabs](src/SmugglerBayTabs) | Smuggler Bay Tabs / 暗格储物标签 | The smuggler bay and the improved smuggler bay can use a storage expansion kit to add tabs. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3834632565) |
+| <img src="https://github.com/canisminor1990/probably-stolen-mods/blob/main/src/StorageThemes/preview.png?raw=true" width="96" alt="Storage Themes"> | [StorageThemes](src/StorageThemes) | Storage Themes / 储物舱涂装 | Painted themes for storage bays, smuggler bays, the hypertech bay, and machine bays. Switch appearance to open the theme panel and pick a skin. | [Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3830120722) |
 <!-- /mods-table -->
 
 ## Commands

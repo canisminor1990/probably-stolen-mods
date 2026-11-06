@@ -1,8 +1,8 @@
 ---
 name: publish-workshop
 description: >-
-  用 steamcmd 把本仓库的模组发布或更新到《深空当铺》创意工坊（AppId 4348910）。
-  Use when the user asks to publish, upload, or update a Probably Stolen Steam Workshop item.
+  发布或更新《深空当铺》创意工坊（AppId 4348910）：steamcmd 上传文件，workshop-desc 分开写英文和中文说明。
+  Use when the user asks to publish, upload, or update a Probably Stolen Steam Workshop item or its description.
 ---
 
 # 发布到创意工坊
@@ -20,15 +20,28 @@ description: >-
 
 本机已安装的同 ID 模组会盖过创意工坊副本。上传成功不等于本机正在跑工坊那一份。
 
+## 更新顺序
+
+文件和说明是两步。游戏先完全退出。
+
+1. 新贴图或新行为还没写进 `<ModVersion>` 就先升版本，再 `npm run build`。只在 README 里加截图、而这一版还没上传过，就不要为截图再加一号。
+2. `npm run desc`。`README.md` 里单独成行的 `![标题](https://raw.githubusercontent.com/.../screenshots/x.png)` 会变成 `[img]`。`---` 变成 `[hr][/hr]`。
+3. 改 VDF 的 `changenote`，带上版本号，先中文，后英文。
+4. `steamcmd` 上传安装目录里的文件。成功标志是 `Committing update...Success.`
+5. 停。`steamcmd +login` 会把正在开着的 Steam 客户端顶下线，日志是 `Session Replaced`，而且不会自动重连。这时 `npm run workshop-desc` 会得到 `loggedOn=False` 和 `NoConnection`。不要连着重试。请用户在 Steam 窗口重新登录。
+6. 客户端日志重新出现 `Logged On` 之后，再跑 `npm run workshop-desc -- <PascalName>`。它不上传 DLL 和贴图。按 `[hr][/hr]` 拆开：英文写到 `english`，标题用英文名；中文写到 `schinese`，标题是 `中文名 / English Name`。两边都打印 `ok` 才算写上。
+
+不要同时跑 `steamcmd` 和 `workshop-desc`。VDF 里的单段 `description` 只是文件上传时的默认说明；语言页以第 6 步为准。
+
+`scripts/workshop-desc` 必须自带空的 `Directory.Build.props` 和 `Directory.Build.targets`，免得吃到仓库根上的游戏引用。根上的 `ImplicitUsings` 关掉之后，`Directory` 会指到游戏程序集里的命名空间，工具编不过。用 Facepunch.Steamworks 2.3.3 自带的 `steam_api64.dll`。不要换成游戏目录里那份，那份没有 `SteamAPI_Init`。
+
 ## 说明和编号
 
 `package.json` 的 `steam` 是作者页和 AppId。`mods.<PascalName>` 有 `workshopTitle`，已发布的还有 `steamId`。
 
 - `npm run desc`：README 转成 `Description.txt`，并刷新根 README 的模组表。
 - `npm run steam-ids`：抓 `https://steamcommunity.com/id/<vanity>/myworkshopfiles/?appid=4348910`，按标题对上模组，把 `steamId` 写回 `package.json` 和模组表。用 `curl.exe -k`。不要加 `browsefilter=mysubmissions`。不要用需要 Web API key 的 `QueryFiles`。
-- `npm run workshop-desc`：只更新已有 `steamId` 的物品。按 `[hr][/hr]` 拆开，英文写到 Steam `english`，中文写到 `schinese`。中文标题是 `中文名 / English Name`。Steam 客户端要开着，并先退出游戏。这一步不上传 DLL 和贴图。用户没要求更新创意工坊时不要跑。
-
-`steamcmd` 上传文件时，VDF 里的单段 `description` 会盖住默认语言说明。内容传完后再跑一次 `npm run workshop-desc`，把中英文分开写回去。
+- `npm run workshop-desc`：只更新已有 `steamId` 的物品。用户没要求更新创意工坊时不要跑。
 
 ## VDF
 

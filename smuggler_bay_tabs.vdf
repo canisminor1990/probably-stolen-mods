@@ -1,0 +1,47 @@
+"workshopitem"
+{
+	"appid"		"4348910"
+	"publishedfileid"		"3834632565"
+	"contentfolder"		"E:\\Steam\\steamapps\\common\\Probably Stolen\\Mods\\SmugglerBayTabs"
+	"previewfile"		"E:\\Steam\\steamapps\\common\\Probably Stolen\\Mods\\SmugglerBayTabs\\preview.png"
+	"visibility"		"0"
+	"title"		"暗格储物标签 / Smuggler Bay Tabs"
+	"description"		"[h1]Smuggler Bay Tabs[/h1]
+
+The smuggler bay and the improved smuggler bay can use a storage expansion kit to add tabs.
+
+[list]
+[*]The smuggler bay gains 2 tabs per kit.
+[*]The improved smuggler bay gains 1 tab per kit.
+[*]Both stop at 5 tabs, the same as a storage bay.
+[/list]
+
+[h3]Feedback & Source[/h3]
+
+[list]
+[*]Repository: [url=https://github.com/canisminor1990/probably-stolen-mods]canisminor1990/probably-stolen-mods[/url]
+[*]Bugs and requests go on [url=https://github.com/canisminor1990/probably-stolen-mods/issues]GitHub Issues[/url].
+[*]If you like the work and want to support it: [url=https://ko-fi.com/canisminor1990]ko-fi.com/canisminor1990[/url]
+[/list]
+
+[hr][/hr]
+
+[h1]暗格储物标签 / Smuggler Bay Tabs[/h1]
+
+[i]走私者暗格和走私者暗格(改进)可以用储藏区扩建套件增加标签页。[/i]
+
+[list]
+[*]暗格每使用一套，增加 2 页。
+[*]改进暗格每使用一套，增加 1 页。
+[*]两种暗格最多 5 页，和储藏区一样。
+[/list]
+
+[h3]问题反馈与源码[/h3]
+
+[list]
+[*]模组仓库：[url=https://github.com/canisminor1990/probably-stolen-mods]canisminor1990/probably-stolen-mods[/url]
+[*]问题请开 [url=https://github.com/canisminor1990/probably-stolen-mods/issues]GitHub Issues[/url]。
+[*]喜欢这些模组、想支持一下：[url=https://ko-fi.com/canisminor1990]ko-fi.com/canisminor1990[/url]
+[/list]"
+	"changenote"		"首次发布。 First release."
+}

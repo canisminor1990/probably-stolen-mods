@@ -1,0 +1,88 @@
+# en.csv
+menu_rules,Storage rules
+menu_trash,Trash
+window_title,Storage Rules
+master,Master switch
+tip_master,While this is off, sorting does not move items. The hotkey turns it back on.
+search_bins,Search containers
+filter_all,All
+filter_on,Enabled
+filter_off,Disabled
+filter_supply,Supply
+refresh,Refresh
+include_all,Include every item with slots
+tip_include,Normally only storage, machines, and cages are listed. Turn this on to include other slotted items.
+sort_now,Sort now
+status_ready,Pick a container, then click a category. Click to allow, again to block, again to clear.
+status_on,Storage rules are on
+status_off,Storage rules are off
+status_moved,Stored
+status_idle,Nothing needed to move
+status_none,No container is enabled
+status_full,Full
+status_cleared,Rules cleared
+status_copied,Rules copied
+status_pasted,Rules pasted
+pick_one,Select a container on the left.
+enable,Enable this slot
+tip_enable,Only an enabled slot receives items.
+receive,Receive items
+tip_receive,Sorting can place items into this slot.
+supply,Supply source
+tip_supply,Items here are offered to machines and other containers. A storage page can receive and supply at the same time.
+output_note,Output slots can supply items, and they do not receive any.
+open_machine,Open this machine once so its slots exist, then set the rules.
+accept_stolen,Accept stolen
+tip_stolen,Off by default. Smuggler bays start on. While this is off, stolen items skip this slot.
+accept_contraband,Accept contraband
+tip_contraband,Off by default. Smuggler bays start on. While this is off, contraband skips this slot.
+priority,Priority
+tip_priority,Higher numbers are filled first. Equal numbers follow the list order.
+stolen_only,Stolen and contraband only
+tip_stolen_only,Ignores the allow list. The block list still applies. A full slot leaves the item where it is.
+hint_empty,An empty allow list accepts everything except blocked items.
+hint_fridge,An empty allow list on a fridge accepts nothing in that zone.
+hint_stolen,Only stolen items and contraband are accepted. The allow list waits, and the block list still applies.
+hint_cycle,Click to allow (green), again to block (red), again to clear (gray).
+chosen_header,Chosen
+chosen_empty,Nothing is allowed or blocked yet.
+section_slot,This slot
+section_flow,In and out
+section_limit,Limits
+only_here,Only what's in here
+tip_only_here,On: the picker lists categories and items already in this container. Off: it lists everything.
+picker_empty,Nothing in this container to pick yet.
+hint_cycle_block,Only the block list is used. Click to block, again to clear.
+search_rules,Search categories or items
+types_header,Categories
+items_header,Items
+clear_rules,Clear
+copy_rules,Copy
+paste_rules,Paste
+trash_hint,The trash can does not take normal items. These two switches only cover cleanup.
+trash_feces,Sort animal feces into the trash can
+tip_feces,Pinned items and debris stay put.
+trash_nightly,After sleep, bring new underground-exchange items back
+tip_nightly,They try the back counter, then the inventory, then the storage rules.
+word_allow,Allow
+word_block,Block
+word_on,On
+word_off,Off
+word_supply,Supply
+no_bins,No containers found.
+slot_input,Input
+slot_output,Output
+slot_container,Container
+slot_storage,Storage
+slot_chip,Chip
+slot_unknown,Slot
+tag_dna_blank,Blank DNA disk
+tag_dna_written,Written DNA disk
+tag_wine_empty,Empty wine bottle
+tag_wine_full,Finished wine
+sort_hotkey,Sort
+sort_hotkey_tip,Move items into enabled containers using their rules.
+overview_hotkey,Open storage window
+overview_hotkey_tip,Open the storage rules window.
+toggle_hotkey,Master switch
+toggle_hotkey_tip,Pause or resume auto storage.

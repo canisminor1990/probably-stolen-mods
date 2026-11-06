@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>AutoStorage</AssemblyName>
+    <RootNamespace>AutoStorage</RootNamespace>
+    <ModInstallName>AutoStorage</ModInstallName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(ManagedDir)\UnityEngine.AudioModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(ManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ModFile Include="manifest.xml;Localization\**" />
+    <None Remove="preview.png;Localization\**" />
+    <EmbeddedResource Include="Sounds\sort_complete.wav" />
+  </ItemGroup>
+
+</Project>

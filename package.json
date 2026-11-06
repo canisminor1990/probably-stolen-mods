@@ -7,6 +7,7 @@
     "build": "dotnet build probably-stolen-mods.slnx -c Release",
     "build:storage-themes": "dotnet build src/StorageThemes/StorageThemes.csproj -c Release",
     "build:smuggler-bay-tabs": "dotnet build src/SmugglerBayTabs/SmugglerBayTabs.csproj -c Release",
+    "build:auto-storage": "dotnet build src/AutoStorage/AutoStorage.csproj -c Release",
     "clean": "dotnet clean probably-stolen-mods.slnx",
     "desc": "node scripts/convert-docs.mjs desc",
     "readme": "node scripts/convert-docs.mjs readme",
@@ -34,6 +35,9 @@
     "SmugglerBayTabs": {
       "steamId": "3834632565",
       "workshopTitle": "暗格储物标签 / Smuggler Bay Tabs"
+    },
+    "AutoStorage": {
+      "workshopTitle": "收纳规则 / Storage Rules"
     }
   }
 }

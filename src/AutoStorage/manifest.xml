@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Manifest>
+  <ID>storage_rules</ID>
+  <Name>收纳规则 / Storage Rules</Name>
+  <Author>CanisMinor</Author>
+  <ModVersion>1.3.0</ModVersion>
+  <Description>右键一个容器，只打开它自己的收纳规则。左边是格子设置和已选规则，右边默认只列出这个容器里的类别和物品。默认灰色，收入为绿，排除为红。 Right-click one container to open only its rules. The left side is the slot setup and the rules you have set. The right side starts with the categories and items already in that container. Idle is gray, allowed is green, blocked is red.</Description>
+  <GameVersions>
+    <Version>0.46</Version>
+    <Version>0.46D</Version>
+  </GameVersions>
+  <Prerequisites />
+  <Assemblies>
+    <Assembly>AutoStorage.dll</Assembly>
+  </Assemblies>
+  <Capabilities>
+    <Capability>reflection-external</Capability>
+  </Capabilities>
+</Manifest>

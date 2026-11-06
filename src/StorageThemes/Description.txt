@@ -4,7 +4,29 @@ Adds painted theme sprites to storage bays, smuggler bays, the hypertech bay, an
 
 This is only a cosmetic mod. Storage capacity and contents are unchanged.
 
-[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/psd/screentshot.png[/img]
+Storage bay
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/1.png[/img]
+
+Large storage bay
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/2.png[/img]
+
+Smuggler bay
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/s1.png[/img]
+
+Large smuggler bay
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/s2.png[/img]
+
+Machine bay
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/m1.png[/img]
+
+Extended machine bay
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/m2.png[/img]
 
 [h3]Languages[/h3]
 
@@ -16,8 +38,8 @@ UI text covers English and Chinese.
 [*]Works on the storage bay, the large storage bay, the smuggler bay, the large smuggler bay, the hypertech bay, the machine bay, and the extended machine bay.
 [*]Toggle appearance to open the theme panel, then pick a skin.
 [*]Storage bays keep the vanilla frames: Original, Orange, and Dark.
-[*]The machine bay keeps its five fill sprites, machine_bay0 through machine_bay4. One machine_bay.png covers all five, and the skin stays on as the bay fills. A machine_bay0.png through machine_bay4.png file is used for that fill level when it exists.
-[*]A painted theme appears when its sprite is in that theme folder. Storage bays and the hypertech bay have the full set. Machine bays have Blank, Chemistry, Fish, Food, Grape, Household, Material, Meat, Plant, Water, and Weapon. Smuggler bays currently have Chip, Medical, and Weapon.
+[*]The machine bay keeps its five fill sprites, [i]machine_bay0[/i] through [i]machine_bay4[/i]. One [i]machine_bay.png[/i] covers all five, and the skin stays on as the bay fills. A [i]machine_bay0.png[/i] through [i]machine_bay4.png[/i] file is used for that fill level when it exists.
+[*]A painted theme appears when its sprite is in that theme folder. Storage bays and the hypertech bay have the full set. Machine bays have Blank, Chemistry, Fish, Food, Grape, Household, Material, Meat, Plant, Water, and Weapon. Smuggler bays currently have Card, Chip, Medical, Plant, and Weapon.
 [/list]
 
 [h3]Settings[/h3]
@@ -43,7 +65,29 @@ UI text covers English and Chinese.
 
 仅装饰，不改变容量和里面的东西。
 
-[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/psd/screentshot.png[/img]
+储物舱
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/1.png[/img]
+
+大号储物舱
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/2.png[/img]
+
+走私舱
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/s1.png[/img]
+
+大号走私舱
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/s2.png[/img]
+
+机械舱
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/m1.png[/img]
+
+扩展机械舱
+
+[img]https://raw.githubusercontent.com/canisminor1990/probably-stolen-mods/main/src/StorageThemes/screenshots/m2.png[/img]
 
 [h3]语言[/h3]
 
@@ -55,8 +99,8 @@ UI text covers English and Chinese.
 [*]支持储物舱、大号储物舱、走私舱、大号走私舱、超科技舱、机械舱和扩展机械舱。
 [*]切换外观打开涂装面板，再点选一种涂装。
 [*]储物舱保留游戏自带的三档：原图、橙色、深色。
-[*]机械舱仍按装填程度使用 machine_bay0 到 machine_bay4。一张 machine_bay.png 覆盖这五档，装东西时涂装不会掉。如果另外放了 machine_bay0.png 到 machine_bay4.png，那一档就用对应的图。
-[*]某个主题文件夹里有对应图片，面板里才会出现它。储物舱和超科技舱是全套。机械舱目前有空白、化学、鱼、食物、葡萄、日用、材料、肉类、植物、水、武器。走私舱目前有芯片、医疗、武器。
+[*]机械舱仍按装填程度使用 [i]machine_bay0[/i] 到 [i]machine_bay4[/i]。一张 [i]machine_bay.png[/i] 覆盖这五档，装东西时涂装不会掉。如果另外放了 [i]machine_bay0.png[/i] 到 [i]machine_bay4.png[/i]，那一档就用对应的图。
+[*]某个主题文件夹里有对应图片，面板里才会出现它。储物舱和超科技舱是全套。机械舱目前有空白、化学、鱼、食物、葡萄、日用、材料、肉类、植物、水、武器。走私舱目前有磁卡、芯片、医疗、植物、武器。
 [/list]
 
 [h3]设置[/h3]

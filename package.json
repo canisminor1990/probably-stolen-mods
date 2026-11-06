@@ -1,11 +1,38 @@
 {
   "name": "probably-stolen-mods",
   "private": true,
+  "type": "module",
   "description": "Probably Stolen mods. Each mod is a project under src and installs into the game Mods folder when built.",
   "scripts": {
     "build": "dotnet build probably-stolen-mods.slnx -c Release",
     "build:storage-themes": "dotnet build src/StorageThemes/StorageThemes.csproj -c Release",
     "build:smuggler-bay-tabs": "dotnet build src/SmugglerBayTabs/SmugglerBayTabs.csproj -c Release",
-    "clean": "dotnet clean probably-stolen-mods.slnx"
+    "clean": "dotnet clean probably-stolen-mods.slnx",
+    "desc": "node scripts/convert-docs.mjs desc",
+    "readme": "node scripts/convert-docs.mjs readme",
+    "docs": "node scripts/convert-docs.mjs desc",
+    "index": "node scripts/readme-index.mjs",
+    "workshop-desc": "node scripts/workshop-desc.mjs",
+    "steam-ids": "node scripts/steam-ids.mjs",
+    "package": "dotnet build probably-stolen-mods.slnx -c Release && node scripts/convert-docs.mjs desc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canisminor1990/probably-stolen-mods",
+    "branch": "main"
+  },
+  "steam": {
+    "vanity": "canisminor",
+    "appId": 4348910,
+    "account": "canisminor1990"
+  },
+  "mods": {
+    "StorageThemes": {
+      "steamId": "3830120722",
+      "workshopTitle": "Storage Themes"
+    },
+    "SmugglerBayTabs": {
+      "workshopTitle": "暗格储物标签 / Smuggler Bay Tabs"
+    }
   }
 }

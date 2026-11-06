@@ -11,6 +11,7 @@ internal static class Palette
     internal static readonly string[] Themes =
     {
         "blank",
+        "card",
         "chemistry",
         "chip",
         "fish",
